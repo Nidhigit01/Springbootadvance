@@ -1,0 +1,21 @@
+spring:
+  application:
+      name:imsdemo
+
+  profiles:
+    active: dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, metrics, info
+
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    root: WARN
